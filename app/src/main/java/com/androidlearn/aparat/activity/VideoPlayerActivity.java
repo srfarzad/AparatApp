@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.androidlearn.aparat.R;
@@ -73,9 +74,10 @@ public class VideoPlayerActivity extends AppCompatActivity {
                     database.idao().deleteVideo(Integer.parseInt(video.getId()));
 
                 }else {
+
                     binding.imgFavorite.setImageResource(R.drawable.ic_baseline_favorite_24);
                     database.idao().insert(video);
-
+                    Log.e("","");
                 }
 
 
